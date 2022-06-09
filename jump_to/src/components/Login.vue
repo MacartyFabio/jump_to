@@ -1,32 +1,22 @@
-import jumptoImg from './assets/My_project11.png'
-import { useState } from 'react';
-import './styles.css'
-function App() {
-  const [email, setEmail] = useState("")
-  const [password, setPassword] = useState("")
-  return (
+<template>
     <div className="container">
       <div className="container-login">
         <span className="login-form-title">Bem vindo ao Jump To!</span>
         <div className="wrap-login">
           <form className="form-login">
             <span className="login-form-title">
-              <img src={jumptoImg} alt="tela de login"/>
+              <img alt="jump_to_logo" class="logo" src="@/assets/My_project11_transp.png" />
             </span>
             <div className="wrap-input">
               <input type="email" 
-                className={email !== "" ? 'has-val input' : 'input'} 
-                value={email} 
-                onChange={e => setEmail(e.target.value)}
+                className='has-val input'
               />
               <span className="focus-input" data-placeholder="Email"></span>
             </div>
 
             <div className="wrap-input">
               <input type="password" 
-                className={password !== "" ? 'has-val input' : 'input'} 
-                value={password} 
-                onChange={e => setPassword(e.target.value)}
+                className='has-val input'
               />
               <span className="focus-input" data-placeholder="Password"></span>
             </div>
@@ -43,7 +33,10 @@ function App() {
         </div>
       </div>
     </div>
-  );
-}
-
-export default App;
+</template>
+<script>
+    
+</script>
+<style>
+   @import "../assets/style.css";
+</style>
