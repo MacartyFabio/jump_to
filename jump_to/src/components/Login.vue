@@ -9,14 +9,16 @@
             </span>
             <div className="wrap-input">
               <input type="email" 
-                className='has-val input'
+                :class="[email != '' ? 'has-val input' : 'input']"
+                v-model="email"
               />
               <span className="focus-input" data-placeholder="Email"></span>
             </div>
 
             <div className="wrap-input">
               <input type="password" 
-                className='has-val input'
+                :class="[password != '' ? 'has-val input' : 'input']"
+                v-model="password"
               />
               <span className="focus-input" data-placeholder="Password"></span>
             </div>
@@ -35,7 +37,14 @@
     </div>
 </template>
 <script>
-    
+  export default {
+    data() {
+      return {
+        email:'',
+        password:'',
+      }
+    },
+  }
 </script>
 <style>
    @import "../assets/style.css";
